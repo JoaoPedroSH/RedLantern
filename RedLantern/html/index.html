@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Red Lantern Design </title>
+	  
+<!-- Bibliotecas CSS e JS -->
+    <link rel="stylesheet" type="text/css"  href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/stylebotstrap.css">
+	<script type="text/javascript" src="../js/popper.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-4.4.1.js"></script>
+	  
+<!-- Validação formulario de duvidas-->
+<script language="javascript">
+	
+function tira_duvidas (duvidaform)
+{
+    if (duvidaform.nome.value=="")
+    {
+        alert ("Informe seu nome!");
+        return false;
+    }
+	
+    if (duvidaform.email.value=="" || duvidaform.email.value.indexOf('@', 0) == -1 || duvidaform.email.value.indexOf('.', 0) == -1)
+    {
+        alert ("E-mail inválido!");
+        return false;
+		
+	if (duvidaform.comentario.value.length<1 || duvidaform.comentario.value.length>300)
+    {
+        alert ("Excedeu a quantidade de caracteres (300)");
+        return false;
+    }
+    if (duvidaform.comentario.value.indexOf(' ', 0) != -1)  
+    {
+        alert ("O campo 'Pergunta' não pode ficar em branco!");
+        return false;
+    }
+	return true;
+}
+</script>
+  </head>
+	
+<!-------------------------------------------------------------------------------------------------------------->	
+
+<body>
+<center>
+	
+<!-- Navbar -->
+<nav class="navbar sticky-top navbar-light bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" style="font-family: Cambria,'Times New Roman'">
+      <img src="../css/img/logo.png" alt="logo" id="logo">
+    </a>
+	  <ul class="navbar-nav">
+        <li class="nav-item">
+			<a class="nav-link" href="https://instagram.com/redlanterndesign?igshid=gftbe239iijfindex.html" target="blanck">
+				<img src="../css/img/instagram1.png" id="insta" alt="logo do insta empresa">
+			</a>
+        </li>
+	  </ul>
+  </div>
+</nav>
+	  
+<!-- Banner -->
+    <center><img src="../css/img/imagem1.1.png" alt="Imagem" id="imagem1"></center>
+	<br><br>
+	 
+<!-- Sobre a Empresa -->
+	  <div>
+         <h1 id="titulo"> Red Lanter Designer</h1>
+		  <br>
+         <p class="paragrafos">Somos uma empresa de Web Design, que procura dar o melhores e mais modernos sites para nossos clientes.<br>
+		  Se busca um site que vai além das espectativas de seus clientes e até mesmo de sua imaginação, vem com a RED LANTERN DESIGN.</p>
+		 <p class="paragrafos"> Veja abaixo algumas das qualidades de nossa empresa e os profissionais que estarão a seu serviço!</p>
+	  </div>
+	  <br><br>
+	  
+<!-- Conteiners com as qualidades da empresa -->
+	<hr class="linhas">
+	<div class="container">
+	  <div class="row">
+		  <div class="col-4">
+			  <h2 class="titulos">Qualidade</h2>
+			  <p class="paragrafos"> Procuramos usar o que há de mais moderno para os sites de hoje, mas também pensando em possíveis upgrades futuros, garantindo assim uma ótima qualidade no produto.<br></p>
+		  </div>
+
+		  <div class="col-4">
+			  <h2 class="titulos">Eficiência</h2>
+			  <p class="paragrafos"> Priorizamos a competencia, e a produtividade, para atender até mesmo com folga os prazos de nossos clientes e ainda dando o melhor de um site.</p>
+		  </div>
+
+		  <div class="col-4">
+			  <h2 class="titulos">Preço Justo</h2>
+			  <p class="paragrafos"> Vizamos os preços mais justos possíveis para nossos clientes, e com abertura para diálogo e negociação.</p>
+		  </div>
+		</div>
+	  </div>
+	  <hr>
+      <br><br>
+	  
+<!-- Transparencia do trabalho e perfil dos profissionais -->
+	  <h2 class="titulos">Profissionais</h2><br>
+	  <div>
+		<iframe src="../css/video/video.mp4" id="video"></iframe>
+	  </div>	  
+	  <br>
+  <div class="container">
+	  <div class="row">
+			<div id="perfil1">
+			  	<img  src="../css/img/perfil1.jpeg" alt="Foto João Pedro" id="foto1">
+				<br><br>
+			  	<h5 class="paragrafos">João Pedro Lima</h5>
+			  	<p class="paragrafos">Desenvolvedor FRONT END</p>
+			  	<a href="https://www.instagrm.com/joaopedrosh_?r=nametag" target="blanck"><img src="../css/img/instagram.png" alt="logoinsta" id="coment"></a>
+      		</div>
+			<div id="perfil2">
+				<img src="../css/img/perfil2.jpeg" alt="Foto Eduardo" id="foto2">
+				<br><br>
+				<h5 class="paragrafos">Eduardo Candido</h5>
+				<p class="paragrafos">Desenvolvedor BACK END</p>
+				<a href="https://instagram.com/eduardo_candido.s?igshid=1nbbb5rpg8x2i" target="blanck"><img src="../css/img/instagram.png" alt="logoinsta" id="coment2"></a>
+	  		</div>
+	  	</div>
+	  </div>
+	  <br>
+	  <hr>
+	  <br>
+	  
+<!-- Encaminhamento para formulário de contratação -->
+	  <div>
+          <h2 class="titulos">Contrate-nos</h2>
+          <h4 class="paragrafos"> Gostou do que temos a oferecer a você? </h4>
+		  <h4 class="paragrafos"> Contrate nossos serviços agora mesmo!</h4>
+		  <br>
+		  <a href="contrato.html" role="button"><button class="contratar">CONTRATAR</button></a>
+	  </div> 
+	<br>
+	
+<!-- Formulario de duvidas e perguntas -->
+<hr>
+<div class"container" id="contduvidas" class="bg-light"><br>
+	<h4 class="titulos">Tire suas dúvidas aqui.</h4>
+	<br>
+	<form method="POST" action="../php/duvidas.php" onSubmit="return tira_duvidas(this)">
+  	<p class="paragrafos">Nome: <input type="text" name="nome" size="25"></p>
+  <p class="paragrafos">E-mail: <input type="text" name="email" size="25"></p>
+		<br>
+	<p class="paragrafos" id="parduvidas">Pergunta:<textarea class="form-control" placeholder="Escreva aqui" id="floatingTextarea2" style="height: 100px" name="comentario"></textarea></p>
+<br>
+	<p><input class="contratar" type="submit" value="Enviar" name="enviar" ></p>
+<br>
+</div>
+	
+<!-- Rodapé -->	  
+	<hr>
+	<footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p id="rodape">Copyright © JP & EC. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>	
+</center>
+</body>
+</html>

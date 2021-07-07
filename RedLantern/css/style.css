@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+	
+	background-image: linear-gradient(to right, white, grey, red);
+	border: groove;
+}
+
+#logo{
+	width: 200px;
+}
+
+#contduvidas{
+	padding-left: 450px;
+	padding-right: 450px;
+}
+
+#parduvidas{
+	background-color: #E1E1E1;
+}
+#imagem1{
+	padding-top: 0px;
+	width: 1903px;
+	height: 450px;
+	border:inset;
+	border-color: crimson;
+}
+
+#titulo{
+	font-family: 'Cambria','Times New Roman';
+}
+
+.paragrafos{
+	font-family: 'Cursive';
+	font-size: 20px;
+}
+
+.titulos{
+	font-family: 'Cambria','Times New Roman';
+}
+
+#video{
+	width: 906px;
+	height: 500px;
+}
+
+#perfil1{
+	padding-left: 285px;
+}
+
+#perfil2{
+	padding-left: 100px;
+}
+
+#insta{
+	width: 40px;
+}
+
+#ajuda{
+	padding-left: 1650px;
+}
+
+#coment{
+	width: 45px;
+}
+
+#coment2{
+	width: 45px;
+}
+
+#foto1{
+	width: 115px;
+	border: groove;
+}
+
+#foto2{
+	width:115px;
+	border: groove;
+}
+
+#rodape{
+	font-size: 14px;
+}
+
+.contratar{
+	border:double;
+	border-color: crimson;
+	color: black;
+	background-color:#BCBCBC;
+	font-size: 20px;
+	font-family: 'Cambria','Times New Roman';
+}
+
+#orgemail{
+	padding-left: 33px;
+}
+
+#orgcelular{
+	padding-right: 10px;
+}
+
+#orgestado{
+	padding-right: 95px;
+}
+
+#orgcidade{
+	padding-left: 55px;
+}

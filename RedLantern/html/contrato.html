@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cantrato</title>
+	<link rel="stylesheet" type="text/css"  href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/stylebotstrap.css">
+
+<script language="javascript">
+function valida_dados (nomeform)
+{
+    if (nomeform.nome.value=="")//valores em brancos
+    {
+        alert ("Informe seu nome!");
+        return false;
+    }
+    if (nomeform.email.value=="" || nomeform.email.value.indexOf('@', 0) == -1 || nomeform.email.value.indexOf('.', 0) == -1)//Este m&#233;todo retorna -1 se o valor a ser pesquisado nunca ocorre
+    {
+        alert ("E-mail inválido!");
+        return false;
+    }
+	
+	if (nomeform.celular.value.length<11 || nomeform.celular.value.length>14)//verifica o comprimento da string 
+    {
+        alert ("Número Incorreto! Ex: DDD XXXXXXXXX");
+        return false;
+    }
+ 
+		
+    if (nomeform.estado.selectedIndex ==0)//se caso ele n&#227;o selecionar nenhum
+    {
+        alert ("Selecione um estado!");
+        return false;
+    }
+       
+  
+    if (nomeform.cidade.value.length<2 || nomeform.cidade.value.length>30)//verifica o comprimento da string
+    {
+        alert ("Cidade Incorreto! Informe novamente");
+        return false;
+    }
+    if (nomeform.cidade.value.indexOf(' ', 0) != -1)//retorna -1 se o valor a ser pesquisado nunca ocorre. Se for diferente de -1 significa que que ocorreu presen&#231;a de espa&#231;os em brancos    
+    {
+        alert ("O campo Cidade não pode ficar em branco!");
+        return false;
+    }
+ 
+return true;
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-light bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" style="font-family: Cambria,'Times New Roman'">
+      <img src="../css/img/logo.png" alt="logo" id="logo">
+    </a>
+	  <ul class="navbar-nav">
+        <li class="nav-item">
+			<a class="nav-link" href="https://instagram.com/redlanterndesign?igshid=gftbe239iijf">
+				<img src="../css/img/instagram1.png" id="insta" alt="logo do insta empresa">
+			</a>
+        </li>
+	  </ul>
+  </div>
+</nav>	
+	
+<center>
+<br><br><br><br>
+<h1 class="titulos">Preencha o formulário para contratar nossos serviços.</h1>
+<p class="paragrafos" style="font-size: 20px">Não insira acentuação nas informações. Por favor!</p>
+
+<br><br>
+<form method="POST" action="../php/contratado.php" onSubmit="return valida_dados(this)">
+  <p class="paragrafos">Nome completo: <input type="text" name="nome" size="30"></p>
+<br>
+  <p class="paragrafos" id="orgemail">E-mail: <input type="text" name="email" size="25"></p>
+<br>
+  <p class="paragrafos" id="orgcelular">Celular: <input type="tel" name="celular" size="20"></p>
+<br>
+  <p class="paragrafos" id="orgestado">Estado: 
+  <select size="1" name="estado">
+						<option>Selecionar</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="PR">PR</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                      </select>
+  </p>
+<br>
+  <p class="paragrafos" id="orgcidade">Cidade: <input type="text" name="cidade" size="28"></p>
+<br>
+  <h6 class="titulos">Após a contratação entraremos em contato com você o mais rápido possível, </h6>
+  <h6 class="titulos">para iniciarmos a criação do seu Sistema Web.</h6>
+<br>
+  <p><input class="contratar" type="submit" value="Contratar" name="contratar"></p>
+</form>
+	
+	
+</center>
+</body>
+</html>
